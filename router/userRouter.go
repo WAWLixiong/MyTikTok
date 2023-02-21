@@ -8,8 +8,8 @@ import (
 func UserRouterInit(router *gin.Engine) {
 	userRouter := router.Group("/user")
 	{
-		userRouter.GET("/user", controller.UserController{}.User)
-		userRouter.GET("/login", controller.UserController{}.User)
-		userRouter.GET("/logout", controller.UserController{}.User)
+		userRouter.GET("/user", controller.UserController{}.UserInfo)
+		userRouter.GET("/login", controller.UserController{}.UserInfo)
+		userRouter.GET("/logout", controller.UserController{}.UserInfo)
 	}
 }
