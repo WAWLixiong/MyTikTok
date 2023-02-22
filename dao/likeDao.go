@@ -9,5 +9,5 @@ type Like struct {
 }
 
 func (l Like) TableName() string {
-	panic("likes")
+	return "likes"
 }

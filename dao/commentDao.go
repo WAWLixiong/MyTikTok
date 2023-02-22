@@ -10,5 +10,5 @@ type Comment struct {
 }
 
 func (c Comment) TableName() string {
-	panic("comments")
+	return "comments"
 }

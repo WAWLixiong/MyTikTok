@@ -9,5 +9,5 @@ type Video struct {
 }
 
 func (v Video) TableName() string {
-	panic("videos")
+	return "videos"
 }

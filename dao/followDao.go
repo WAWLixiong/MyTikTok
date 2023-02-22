@@ -8,5 +8,5 @@ type Follow struct {
 }
 
 func (f Follow) TableName() string {
-	panic("follows")
+	return "follows"
 }
