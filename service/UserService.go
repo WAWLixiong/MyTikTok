@@ -7,13 +7,13 @@ type UserService interface {
 		个人使用
 	*/
 	// GetTableUserList 获得全部TableUser对象
-	GetTableUserList() []dao.User
+	GetUserList() []dao.User
 
 	// GetTableUserByUsername 根据username获得TableUser对象
-	GetTableUserByUsername(name string) dao.User
+	GetUserByUsername(name string) dao.User
 
 	// GetTableUserById 根据user_id获得TableUser对象
-	GetTableUserById(id int64) dao.User
+	GetUserById(id int64) dao.User
 
 	// InsertTableUser 将tableUser插入表内
 	InsertTableUser(tableUser *dao.User) bool
@@ -21,7 +21,7 @@ type UserService interface {
 		他人使用
 	*/
 	// GetUserById 未登录情况下,根据user_id获得User对象
-	GetUserById(id int64) (User, error)
+	GetUserByIdNotLogin(id int64) (User, error)
 
 	// GetUserByIdWithCurId 已登录(curID)情况下,根据user_id获得User对象
 	GetUserByIdWithCurId(id int64, curId int64) (User, error)

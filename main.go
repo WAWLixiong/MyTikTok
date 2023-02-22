@@ -1,7 +1,11 @@
 package MyTikTok
 
-import "github.com/gin-gonic/gin"
+import (
+	"MyTikTok/router"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	gin.Default()
+	engine := gin.Default()
+	router.RoutersInit(engine)
 }
